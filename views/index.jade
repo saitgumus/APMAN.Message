@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action="/messages/addmessage", method="POST")
+    .form-group
+      label(for='msgprop') Message Property
+      input#msgprop.form-control(type='text' aria-describedby='emailHelp')
+      small#emailHelp.form-text.text-muted mesasj propert'si uniq olmalıdır.
+    .form-group
+      label(for='msgcontent') Message Content
+      input#msgcontent.form-control(type='text')
+    button.btn.btn-primary(type='submit', data-transition='fade', data-theme='c') Submit
